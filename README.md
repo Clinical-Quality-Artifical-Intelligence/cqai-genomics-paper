@@ -1,8 +1,8 @@
 ---
 title: "Closing the Genomic Gap — CQAI Genomics Equity Paper"
 emoji: 🧬
-colorFrom: teal
-colorTo: blue
+colorFrom: blue
+colorTo: indigo
 sdk: static
 pinned: true
 tags:
