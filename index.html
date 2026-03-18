@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Closing the Genomic Gap — CQAI</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; line-height: 1.8; color: #2c2c2c; background: #fafafa; }
+  .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 3rem 0 2rem; border-bottom: 2px solid #e0e0e0; margin-bottom: 2rem; }
+  .header h1 { font-size: 2rem; color: #1a237e; line-height: 1.3; margin-bottom: 0.5rem; }
+  .header h2 { font-size: 1.1rem; font-weight: normal; color: #555; margin-bottom: 1rem; }
+  .header .meta { font-size: 0.9rem; color: #888; }
+  .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.2rem; }
+  .links a { background: #1565C0; color: white; padding: 0.4rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem; font-family: sans-serif; }
+  .links a:hover { background: #0D47A1; }
+  .abstract { background: #e3f2fd; border-left: 4px solid #1565C0; padding: 1.5rem; border-radius: 4px; margin: 2rem 0; font-style: italic; }
+  h2 { font-size: 1.5rem; color: #1a237e; margin: 2.5rem 0 1rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4rem; }
+  h3 { font-size: 1.15rem; color: #283593; margin: 1.8rem 0 0.8rem; }
+  p { margin-bottom: 1rem; }
+  .key-insight { background: #e8f4f8; border-left: 4px solid #2196F3; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 4px; }
+  .definition { background: #fff8e1; border-left: 4px solid #FFA000; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 4px; }
+  .limitations { background: #fff3e0; border-left: 4px solid #E65100; padding: 1rem 1.2rem; margin: 1.2rem 0; border-radius: 4px; }
+  .conclusion { background: #e8f5e9; border-left: 4px solid #2E7D32; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-radius: 4px; }
+  .disclaimer { background: #f5f5f5; border: 1px solid #ddd; padding: 1rem; border-radius: 4px; font-size: 0.85rem; color: #666; margin-top: 3rem; font-family: sans-serif; }
+  table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: 0.92rem; font-family: sans-serif; }
+  th { background: #1565C0; color: white; padding: 0.6rem 0.8rem; text-align: left; }
+  td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) { background: #f5f5f5; }
+  pre { background: #263238; color: #cfd8dc; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.88rem; margin: 1rem 0; }
+  .acknowledgement { text-align: center; font-style: italic; margin: 2rem 0; font-size: 1.05rem; color: #444; }
+  .pill { display: inline-block; background: #e3f2fd; color: #1565C0; padding: 0.2rem 0.7rem; border-radius: 12px; font-size: 0.82rem; margin: 0.2rem; font-family: sans-serif; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Closing the Genomic Gap</h1>
+    <h2>A Nurse-Built Tool for Pharmacogenomic Equity Across Ancestry Groups in UK Clinical Practice</h2>
+    <div class="meta">
+      <strong>Lincoln Gombedza</strong> — Nurse Citizen Developer, Clinical Quality Artificial Intelligence (CQAI)<br>
+      March 2026 · Practice Development Paper
+    </div>
+    <div style="margin-top:0.8rem;">
+      <span class="pill">🧬 Pharmacogenomics</span>
+      <span class="pill">⚖️ Health Equity</span>
+      <span class="pill">👩‍⚕️ Nursing</span>
+      <span class="pill">🏥 NHS</span>
+      <span class="pill">🌍 Global Majority</span>
+      <span class="pill">🔓 Open Source</span>
+    </div>
+    <div class="links">
+      <a href="https://huggingface.co/spaces/NurseCitizenDeveloper/genomics-health-equity">🧬 Live Tool</a>
+      <a href="https://huggingface.co/spaces/NurseCitizenDeveloper/VirtualGeneScope">🔬 VirtualGeneScope</a>
+      <a href="https://github.com/Clinical-Quality-Artifical-Intelligence">💻 GitHub</a>
+      <a href="https://notes.liiib.re/docs/d0263fc9-e813-43ba-bed6-09e339f943a1/">📖 Blog</a>
+    </div>
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    Current NHS pharmacogenomic (PGx) testing panels were developed primarily using European-ancestry genomic data, creating systematic equity gaps for patients of African, South Asian, East Asian, and mixed heritage backgrounds. This paper presents the <strong>CQAI Genomics Health Equity Tool</strong> — a free, open-source Streamlit application developed by a registered nurse and citizen developer — that maps 10 pharmacogenomic tests across 10 ancestry groups to identify, communicate, and act on these gaps at the clinical point of care.
+    <br><br>
+    Key findings: the NHS DPYD panel omits c.557A>G (African ancestry), flagged by the NHS Race and Health Observatory (July 2024); G6PD deficiency affects ~400 million people globally with no routine NHS panel; UGT1A1*6 is absent from UK panels despite 23% frequency in East Asian populations; NAT2 slow acetylator phenotype is not routinely tested despite ~80% frequency in South Asian populations.
+    <br><br>
+    The tool equips nurses with ancestry-aware coverage assessments, SBAR templates, NMC-compliant patient notes, MDT reports, and downloadable .docx documents — all free, open-source, and requiring no API keys or institutional login.
+  </div>
+
+  <h2>1. Introduction</h2>
+  <p>Pharmacogenomics — the study of how an individual's genes affect their response to drugs — is one of the most clinically significant and yet most inequitably implemented advances in modern medicine. The NHS Genomic Medicine Service has mandated pre-treatment DPYD genotyping for fluoropyrimidine chemotherapy since 2020. Yet the testing panels in routine use were designed around variants identified in European-ancestry populations.</p>
+
+  <div class="key-insight">
+    💡 <strong>Key Clinical Insight</strong>: A "normal" result on an NHS PGx panel does not mean a patient is safe to proceed with standard dosing — it may simply mean that the variant relevant to their ancestry was never included in the panel.
+  </div>
+
+  <p>This paper presents the motivation, design, and clinical utility of two nurse-built genomics tools developed following a pivotal conversation at the <strong>CAHN Rising Together: Global Majority Nursing and Midwifery Leadership Conference</strong>, Manchester, February 2026 — where the imperative to bring genomics equity into nursing practice was made plain.</p>
+
+  <h2>2. Background</h2>
+  <h3>2.1 The Ancestry Gap in NHS PGx Panels</h3>
+
+  <table>
+    <tr><th>Gene</th><th>Drug Class</th><th>Clinical Risk</th><th>NHS Status</th></tr>
+    <tr><td>DPYD</td><td>Fluoropyrimidine chemotherapy</td><td>Severe/fatal toxicity</td><td>Mandated (2020) — panel incomplete</td></tr>
+    <tr><td>G6PD</td><td>Rasburicase, dapsone, primaquine</td><td>Haemolytic anaemia</td><td>Not routinely tested</td></tr>
+    <tr><td>UGT1A1</td><td>Irinotecan</td><td>Severe neutropenia</td><td>Not routinely tested</td></tr>
+    <tr><td>NAT2</td><td>Isoniazid (TB)</td><td>Neuropathy, hepatotoxicity</td><td>Not routinely tested</td></tr>
+    <tr><td>CYP2C19</td><td>Clopidogrel, SSRIs, PPIs</td><td>Therapeutic failure or toxicity</td><td>Partial only</td></tr>
+  </table>
+
+  <div class="definition">
+    ⚠️ <strong>The Equity Gap</strong>: A Black patient receiving fluoropyrimidine chemotherapy could carry the c.557A>G DPYD variant, suffer catastrophic toxicity, and the standard NHS panel would show "no variant found." This is not a clinical error — it is a structural gap in the testing infrastructure.
+  </div>
+
+  <h2>3. The Tools</h2>
+
+  <h3>3.1 VirtualGeneScope</h3>
+  <p>An interactive genomics learning platform for student nurses. Features include gene selection with named variant picker (including NHS RHO 2024 variants), equity alert banners, Gene Quiz, Clinical Case Studies, Population Data, and a full Glossary. NMC Standards Platforms 1, 4, and 6 aligned.</p>
+
+  <h3>3.2 Genomics Health Equity Tool — 10 Tests × 10 Ancestry Groups</h3>
+
+  <table>
+    <tr><th>Test</th><th>Drugs Affected</th><th>Key Equity Gap</th></tr>
+    <tr><td>DPYD</td><td>5-FU, capecitabine, tegafur</td><td>c.557A>G missing (African ancestry)</td></tr>
+    <tr><td>G6PD</td><td>Rasburicase, dapsone, primaquine</td><td>No routine NHS panel</td></tr>
+    <tr><td>UGT1A1</td><td>Irinotecan</td><td>*6 variant missing (East Asian)</td></tr>
+    <tr><td>NAT2</td><td>Isoniazid (TB treatment)</td><td>Not routinely tested</td></tr>
+    <tr><td>CYP2C19</td><td>Clopidogrel, SSRIs, PPIs</td><td>Partial panel coverage</td></tr>
+    <tr><td>CYP2D6</td><td>Codeine, tamoxifen, antipsychotics</td><td>Partial coverage</td></tr>
+    <tr><td>TPMT/NUDT15</td><td>Thiopurines</td><td>NUDT15*3 missing (Asian ancestry)</td></tr>
+    <tr><td>CYP3A5</td><td>Tacrolimus (transplant)</td><td>African ancestry variants underrepresented</td></tr>
+    <tr><td>HLA-B*57:01</td><td>Abacavir (HIV)</td><td>Well covered</td></tr>
+    <tr><td>SLCO1B1</td><td>Statins</td><td>Limited panel coverage</td></tr>
+  </table>
+
+  <h2>4. Clinical Case Examples</h2>
+  <h3>Adaeze, 45, Nigerian-British — DPYD c.557A>G</h3>
+  <p>Referred for adjuvant chemotherapy following colorectal cancer surgery. Standard DPYD genotyping returns no variant found. She receives full-dose capecitabine. On Day 7 she presents with grade 4 mucositis and neutropenia. The c.557A>G variant was not tested — the panel never asked the right question for her ancestry.</p>
+
+  <h3>Kwame, 28, Ghanaian-British — G6PD</h3>
+  <p>Requires rasburicase for tumour lysis syndrome. No G6PD testing performed pre-treatment. He develops acute haemolytic anaemia. G6PD deficiency affects an estimated 25% of West African males — yet no routine NHS PGx panel exists.</p>
+
+  <h3>Priya, 34, South Asian — NAT2 Slow Acetylator</h3>
+  <p>Commences standard-dose isoniazid for TB. At 8 weeks she develops peripheral neuropathy. NAT2 slow acetylator status — present in ~80% of South Asian populations — was not tested, significantly increasing isoniazid plasma concentration and toxicity risk.</p>
+
+  <h2>5. Conclusion</h2>
+  <div class="conclusion">
+    <p>The CQAI Genomics Health Equity Tool demonstrates that:</p>
+    <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+      <li>Pharmacogenomic testing equity gaps are systematic and predictable consequences of panels built from non-representative data</li>
+      <li>Nurses are uniquely positioned to identify and act on these gaps — at the point of drug administration, before harm occurs</li>
+      <li>Free, open-source tools can bridge the gap between policy recommendations (NHS RHO 2024) and frontline clinical practice</li>
+      <li>The nursing profession contains the clinical expertise to build its own tools — the Nurse Citizen Developer model is viable, replicable, and necessary</li>
+    </ol>
+  </div>
+
+  <h2>References</h2>
+  <ol style="margin-left:1.5rem; font-size:0.92rem;">
+    <li>NHS Race and Health Observatory (2024). <em>DPD Testing Lay Summary</em>. NHS RHO, July 2024.</li>
+    <li>NHS England (2020). <em>DPYD genotyping mandate for fluoropyrimidine chemotherapy</em>.</li>
+    <li>CPIC (2023). <em>Guidelines for DPYD and Fluoropyrimidines</em>. cpicpgx.org.</li>
+    <li>NMC (2018). <em>The Code</em>. Nursing and Midwifery Council.</li>
+    <li>NMC (2018). <em>Future Nurse: Standards of Proficiency</em>. Nursing and Midwifery Council.</li>
+    <li>Mwenifumbo JC & Carleton BC (2011). Pharmacogenomics and adverse drug reactions. <em>Translational Research</em>, 159(1): 27–35.</li>
+    <li>NHS England (2023). <em>Workforce Race Equality Standard — 2023 Data Analysis Report</em>.</li>
+    <li>CAHN (2026). <em>Rising Together Conference</em>. Manchester, 5 February 2026.</li>
+  </ol>
+
+  <div class="acknowledgement">
+    <p>To <strong>Professor Habib</strong> — for the whisper.<br>
+    To <strong>CAHN Rising Together</strong> — for the room.<br>
+    To every nurse who has ever wondered whether the standard answer was right for every patient — <em>keep asking</em>.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This paper represents the personal practice development work of Lincoln Gombedza as a Nurse Citizen Developer. It does not represent the views of any employer, NHS organisation, university, or professional body. All tools described are for educational purposes and support but do not replace clinical judgement. Clinical decisions regarding pharmacogenomic testing must be made by qualified clinicians in accordance with local protocols, NICE and CPIC guidelines, and NMC professional standards.
+  </div>
+
+</div>
+</body>
+</html>
